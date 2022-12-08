@@ -1,0 +1,19 @@
+print("***Welcome to the number guessing game***\nLet's see if you can guess the number\n ")
+import random
+count = 0
+n = random.randrange(1,100)
+guess = int(input("Enter a number: "))
+count += 1
+while n!= guess:
+    if guess < n:
+        print("\n Try Again! You guessed too low")
+        guess = int(input("Enter a number again: "))
+        count += 1
+    elif guess > n:
+        print("Try Again! You guessed too high")
+        guess = int(input("Enter a number again: "))
+        count += 1
+    else:
+      break
+result = "Great job you guessed the number in " + str(count) + " tries"
+print(result)
